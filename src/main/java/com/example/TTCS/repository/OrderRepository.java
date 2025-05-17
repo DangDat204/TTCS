@@ -1,6 +1,6 @@
 package com.example.TTCS.repository;
 
-import com.example.TTCS.entity.Order;
+import com.example.TTCS.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

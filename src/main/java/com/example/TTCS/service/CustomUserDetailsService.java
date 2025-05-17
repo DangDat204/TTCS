@@ -1,6 +1,6 @@
 package com.example.TTCS.service;
 
-import com.example.TTCS.entity.User;
+import com.example.TTCS.model.User;
 import com.example.TTCS.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

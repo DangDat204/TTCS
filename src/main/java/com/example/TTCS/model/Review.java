@@ -1,4 +1,4 @@
-package com.example.TTCS.entity;
+package com.example.TTCS.model;
 import jakarta.persistence.*;
 import lombok.*;
 

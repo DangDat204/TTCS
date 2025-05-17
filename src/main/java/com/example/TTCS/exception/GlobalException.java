@@ -1,6 +1,6 @@
 package com.example.TTCS.exception;
 
-import com.example.TTCS.model.ApiResponse;
+import com.example.TTCS.dto.response.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authorization.AuthorizationDeniedException;

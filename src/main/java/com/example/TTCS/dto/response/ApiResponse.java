@@ -1,4 +1,4 @@
-package com.example.TTCS.model;
+package com.example.TTCS.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

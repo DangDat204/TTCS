@@ -1,4 +1,4 @@
-package com.example.TTCS.entity;
+package com.example.TTCS.model;
 import com.example.TTCS.enums.InvoiceStatus;
 import jakarta.persistence.*;
 import lombok.*;
