@@ -1,0 +1,248 @@
+.main-cart-item {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.main-cart-item h1 {
+    color: #2B6CAA;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Table Styles */
+.cart-items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header Styles */
+.cart-items th {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.column-product {
+    width: 45%;
+}
+
+.column-quantity {
+    width: 20%;
+    text-align: center;
+}
+
+.column-price {
+    width: 20%;
+    text-align: right;
+}
+
+.column-action {
+    width: 15%;
+    text-align: center;
+}
+
+/* Item Styles */
+.cart-item td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-image {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    text-align: center;
+}
+
+.item-details h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.item-code {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.item-price {
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.current-price {
+    color: #EE2624;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+/* Quantity Controls */
+.item-quantity {
+    text-align: center;
+}
+
+/* Total Price Column */
+.item-total {
+    text-align: center;
+    color: #EE2624;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Delete Button */
+.item-delete {
+    text-align: center;
+    /* Căn giữa nút trong ô */
+    padding: 8px;
+    /* Khoảng cách bên trong ô */
+}
+
+/* Style cho nút xóa */
+.delete-button {
+    /* Kích thước và hình dạng */
+    width: 40px;
+    /* Tăng nhẹ để chứa cả SVG */
+    height: 40px;
+    /* Chiều cao */
+    border-radius: 8px;
+    /* Bo góc nhẹ thay vì tròn hoàn toàn */
+    border: none;
+    /* Bỏ viền mặc định */
+
+    /* Màu sắc */
+    background-color: #00CC64;
+    /* Đỏ nhẹ nhàng */
+    color: #fff;
+    /* Màu biểu tượng trắng */
+
+    /* Căn chỉnh nội dung */
+    /* display: flex; */
+    /* Dùng flex để căn giữa */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* Khoảng cách giữa các biểu tượng (nếu dùng cả hai) */
+
+    /* Con trỏ và hiệu ứng */
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    /* Đảm bảo không có padding/margin thừa */
+    padding: 0;
+}
+
+/* Style cho biểu tượng Font Awesome */
+.delete-button i {
+    font-size: 18px;
+    /* Kích thước biểu tượng */
+}
+
+/* Style cho SVG */
+.delete-button svg {
+    width: 18px;
+    /* Kích thước SVG */
+    height: 18px;
+    fill: #fff;
+    /* Màu trắng cho SVG */
+}
+
+/* Hiệu ứng khi hover */
+.delete-button:hover {
+    background-color: #d00000;
+    /* Đỏ đậm hơn */
+    transform: scale(1.05);
+    /* Phóng to nhẹ */
+}
+
+/* Hiệu ứng khi nhấn */
+.delete-button:active {
+    background-color: #a00000;
+    /* Đỏ tối hơn */
+    transform: scale(0.95);
+    /* Thu nhỏ nhẹ */
+}
+
+/* Loại bỏ outline khi focus */
+.delete-button:focus {
+    outline: none;
+}
+
+.quantity-input {
+    /* Kích thước và căn chỉnh */
+    width: 60px;
+    /* Chiều rộng nhỏ gọn */
+    height: 35px;
+    /* Chiều cao vừa phải */
+    padding: 5px 10px;
+    /* Khoảng cách bên trong */
+    text-align: center;
+    /* Căn giữa số */
+
+    /* Viền và nền */
+    border: 1px solid #ccc;
+    /* Viền nhẹ */
+    border-radius: 5px;
+    /* Bo góc nhẹ */
+    background-color: #fff;
+    /* Nền trắng */
+
+    /* Phông chữ */
+    font-size: 16px;
+    /* Kích thước chữ */
+    font-family: Arial, sans-serif;
+    /* Phông chữ đơn giản */
+    color: #333;
+    /* Màu chữ tối */
+
+    /* Hiệu ứng khi tương tác */
+    transition: all 0.2s ease;
+    /* Hiệu ứng mượt khi thay đổi */
+
+    /* Xóa nút tăng giảm mặc định của trình duyệt */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+
+
+/* Hiệu ứng khi focus */
+.quantity-input:focus {
+    outline: none;
+    /* Bỏ viền mặc định khi focus */
+    border-color: #007bff;
+    /* Viền xanh khi focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Hiệu ứng bóng nhẹ */
+}
+
+/* Hiệu ứng khi hover */
+.quantity-input:hover {
+    border-color: #999;
+    /* Viền đậm hơn khi hover */
+}

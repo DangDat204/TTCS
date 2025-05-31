@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+.app-container {
+    /* display: flex; */
+    /* flex-direction: column; */
+    min-height: 100vh;
+}
+
+.intro-description {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Giữ nguyên các style bạn đã có */
+    font-size: 1em;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #666;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+
+    /* Thêm thuộc tính này để xử lý ký tự xuống dòng (line breaks) */
+    white-space: pre-wrap;
+    /* Quan trọng: Giữ lại khoảng trắng và ngắt dòng từ nguồn */
+    word-break: break-word;
+    /* Đảm bảo các từ dài cũng sẽ ngắt dòng nếu cần */
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.even-row {
+    background-color: #f9f9f9;
+    /* Màu xám nhạt */
+}
+
+.odd-row {
+    background-color: #ffffff;
+    /* Màu trắng */
+}
+
+.details-label {
+    font-weight: bold;
+    width: 30%;
+}

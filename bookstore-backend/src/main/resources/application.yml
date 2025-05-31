@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  jwt:
+    signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
+    valid-duration: 1800000
+    refreshable-duration: 604800
+  cloudinary:
+    cloudinary.cloud_name: "dzvxgyg88"
+    cloudinary.api_key: "281855212738654"
+    cloudinary.api_secret: "CBx98FIol43xihZJt0fX1AKgt9E"
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  payment:
+    vnPay:
+      url: ${PAY_URL}
+      tmnCode: ${TMN_CODE}
+      secretKey: ${SECRET_KEY}
+      returnUrl: ${RETURN_URL}
+      version: ${VERSION}
+      command: ${COMMAND}
+      orderType: ${ORDER_TYPE}
+
+gemini:
+  api-key: "AIzaSyCxiDbi7JbHV1SchJRrEx-5FgIz8dbScks"
+  base-url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+  max-output-tokens: 1000
+  temperature: 0.1
+  top-p: 0.8
+  top-k: 10
+  max-history-size: 20

@@ -1,0 +1,231 @@
+.header {
+    background-color: #00CC64;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.2s ease;
+}
+
+.home-link:hover {
+    opacity: 0.9;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    color: currentColor;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .site-name {
+        display: none;
+    }
+
+    .logo {
+        height: 32px;
+    }
+
+    .header-container {
+        padding: 8px 12px;
+    }
+}
+
+.search-container {
+    position: relative;
+    width: 500px;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+}
+
+.search-container form {
+    width: 100%;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+    height: 36px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-right: 45px;
+}
+
+.search-input:focus {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-button {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: color 0.2s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.search-button:hover {
+    color: #00CC64;
+    background-color: rgba(0, 204, 100, 0.1);
+}
+
+.search-button .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+    font-weight: 500;
+}
+
+.account-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+}
+
+.account-text {
+    transition: color 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 160px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #27ae60;
+    color: white;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    padding-right: 8px;
+}
+
+.cart-link .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.cart-count {
+    background-color: white;
+    color: #00c853;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+        margin: 0 8px;
+    }
+
+    .search-input {
+        font-size: 13px;
+        padding: 6px 40px 6px 12px;
+        height: 32px;
+    }
+
+    .search-button {
+        height: 28px;
+        width: 28px;
+        right: 2px;
+    }
+
+    .search-button .icon {
+        width: 16px;
+        height: 16px;
+    }
+}

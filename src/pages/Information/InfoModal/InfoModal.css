@@ -1,0 +1,216 @@
+/* Nền mờ khi modal mở */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Hộp modal */
+.modal-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 420px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Tiêu đề modal */
+.modal-box h2 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Nhãn (label) */
+.modal-box label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Ô nhập liệu */
+.modal-box input,
+.modal-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Chỉnh lại input date để đồng bộ */
+.modal-box input[type="date"] {
+    font-size: 14px;
+    padding: 6px;
+}
+
+/* Khu vực nút bấm */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Nút hủy */
+.modal-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Nút Hủy */
+.modal-buttons button:first-child {
+    background: #ccc;
+    color: black;
+}
+
+.modal-buttons button:first-child:hover {
+    background: #b3b3b3;
+}
+
+/* Nút Lưu */
+.save-button {
+    background: #28a745;
+    color: white;
+}
+
+.save-button:hover {
+    background: #218838;
+}
+
+/* Hiệu ứng mở modal */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Label nổi */
+.modal-box .floating-label-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.modal-box .floating-label-group input,
+.modal-box .floating-label-group select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #f8fafc;
+    color: #222;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.modal-box .floating-label-group input:focus,
+.modal-box .floating-label-group select:focus {
+    border-color: #00CC64;
+    box-shadow: 0 0 0 2px #e6fff3;
+    background: #fff;
+}
+
+.modal-box .floating-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 15px;
+    pointer-events: none;
+    background: transparent;
+    transition: 0.2s;
+    padding: 0 4px;
+}
+
+.modal-box .floating-label-group input:focus+.floating-label,
+.modal-box .floating-label-group input:not(:placeholder-shown)+.floating-label,
+.modal-box .floating-label-group select:focus+.floating-label,
+.modal-box .floating-label-group select:not([value=""])+.floating-label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: #00CC64;
+    background: #fff;
+}
+
+/* Icon lịch cho ngày sinh */
+.modal-box .date-select-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.modal-box .date-select-group .calendar-icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #00CC64;
+    pointer-events: none;
+}
+
+.modal-box .date-select-group select {
+    width: 33%;
+    min-width: 0;
+    padding: 10px 8px 10px 32px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    background: #f8fafc;
+    color: #222;
+    transition: border-color 0.2s;
+}
+
+.modal-box .date-select-group select:focus {
+    border-color: #00CC64;
+    background: #fff;
+}
+
+/* Input lỗi */
+.modal-box input.input-error,
+.modal-box select.input-error {
+    border-color: #d32f2f;
+    background: #ffeaea;
+    color: #d32f2f;
+}
+
+.modal-box .floating-label-group input.input-error+.floating-label,
+.modal-box .floating-label-group select.input-error+.floating-label {
+    color: #d32f2f;
+}
+
+/* Icon trong input (ví dụ: user, email) */
+.modal-box .input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #00CC64;
+    pointer-events: none;
+}
